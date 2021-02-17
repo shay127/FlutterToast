@@ -32,6 +32,7 @@ class Fluttertoast {
     Toast toastLength,
     int timeInSecForIosWeb = 1,
     double fontSize,
+    String textAlign,
     ToastGravity gravity,
     Color backgroundColor,
     Color textColor,
@@ -70,6 +71,7 @@ class Fluttertoast {
       'bgcolor': backgroundColor != null ? backgroundColor.value : null,
       'textcolor': textColor != null ? textColor.value : null,
       'fontSize': fontSize,
+      'textAlign': textAlign ?? "",
       'webShowClose': webShowClose,
       'webBgColor': webBgColor,
       'webPosition': webPosition

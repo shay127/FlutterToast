@@ -70,6 +70,7 @@ static NSString *const CHANNEL_NAME = @"PonnamKarthik/fluttertoast";
         NSNumber *textcolor = call.arguments[@"textcolor"];
 //        NSNumber *size = call.arguments[@"size"];
         NSNumber *fontSize = call.arguments[@"fontSize"];
+        NSString *textAlign = call.arguments[@"textAlign"];
 
         if ([fontSize isKindOfClass:[NSNull class]]) {
             fontSize = [[NSNumber alloc] initWithInt:16];
@@ -91,6 +92,13 @@ static NSString *const CHANNEL_NAME = @"PonnamKarthik/fluttertoast";
         style.messageFont = [UIFont systemFontOfSize:cgf];
         style.backgroundColor = [self colorWithHex:bgcolor.unsignedIntegerValue];
         style.messageColor = [self colorWithHex:textcolor.unsignedIntegerValue];
+
+        NSTextAlignment textAlignment = NSTextAlignmentLeft;
+        if ([textAlign isEqualToString:@"right"]) {
+            textAlignment = NSTextAlignmentRight;
+        }
+        style.titleAlignment = textAlignment;
+        style.messageAlignment = textAlignment;
 
 //        if (@available(iOS 11.0, *)) {
 //            UIWindow *window = UIApplication.sharedApplication.keyWindow;

@@ -2,6 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class ToastNoContext extends StatelessWidget {
+  void showHebrewToast() {
+    Fluttertoast.showToast(
+      msg:
+          "זאת הודעה בעברית. וזה עוד משפט. שלום. שלום. שלום. שלום. שלום. שלום. תגידו מה נשמע? זה מוצמד לימין?!",
+      toastLength: Toast.LENGTH_LONG,
+      fontSize: 18.0,
+      textAlign: "right",
+    );
+  }
+
+  void showEnglishToast() {
+    Fluttertoast.showToast(
+      msg:
+          "how are you this morning? do you want to drink a coffee or write code? choose!",
+      toastLength: Toast.LENGTH_LONG,
+      fontSize: 18.0,
+    );
+  }
+
   void showLongToast() {
     Fluttertoast.showToast(
       msg: "This is Long Toast",
@@ -65,6 +84,18 @@ class ToastNoContext extends StatelessWidget {
         body: new Center(
           child: new Column(
             children: <Widget>[
+              new Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: new RaisedButton(
+                    child: new Text('Show Hebrew Toast'),
+                    onPressed: showHebrewToast),
+              ),
+              new Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: new RaisedButton(
+                    child: new Text('Show English Toast'),
+                    onPressed: showEnglishToast),
+              ),
               new Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: new RaisedButton(
