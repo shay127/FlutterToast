@@ -1,3 +1,22 @@
+## [8.0.3]
+
+- flutter analyze fixes
+
+## [8.0.2]
+
+- Null Safety
+- Code Docs Added
+
+## [7.1.8]
+
+- Web sourceMap Warning
+
+## [7.1.7]
+
+- '\n' line crash on Web PR Merged
+- Android 11 Crash fixed
+- Many bug fixes
+
 ## [7.1.6]
 
 - minor fixes
